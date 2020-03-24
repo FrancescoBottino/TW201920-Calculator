@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcolatrice</title>
+    <script type="text/javascript" src="calc.js"></script>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <table class="calculator">
+        <tr>
+            <td class="calculator-display" id="display_op"></td>
+            <td colspan="3" class="calculator-display" id="display_top"></td>
+        </tr>
+        <tr>
+            <td colspan="4" class="calculator-display" id="display_bot"></td>
+        </tr>
+        <tr>
+            <td class="calculator">
+                <button class="calculator calculator-strumento" id="s_clear" onclick="calculator.pressione_tasto(this)">AC</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-strumento" id="s_sign" onclick="calculator.pressione_tasto(this)">+/-</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-strumento" id="s_percent" onclick="calculator.pressione_tasto(this)">%</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-operando" id="o_div" onclick="calculator.pressione_tasto(this)">÷</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="calculator">
+                <button class="calculator calculator-numero" id="n_7" onclick="calculator.pressione_tasto(this)">7</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-numero" id="n_8" onclick="calculator.pressione_tasto(this)">8</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-numero" id="n_9" onclick="calculator.pressione_tasto(this)">9</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-strumento" id="o_mul" onclick="calculator.pressione_tasto(this)">×</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="calculator">
+                <button class="calculator calculator-numero" id="n_4" onclick="calculator.pressione_tasto(this)">4</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-numero" id="n_5" onclick="calculator.pressione_tasto(this)">5</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-numero" id="n_6" onclick="calculator.pressione_tasto(this)">6</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-strumento" id="o_sub" onclick="calculator.pressione_tasto(this)">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="calculator">
+                <button class="calculator calculator-numero" id="n_1" onclick="calculator.pressione_tasto(this)">1</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-numero" id="n_2" onclick="calculator.pressione_tasto(this)">2</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-numero" id="n_3" onclick="calculator.pressione_tasto(this)">3</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-strumento" id="o_add" onclick="calculator.pressione_tasto(this)">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="calculator" colspan="2">
+                <button class="calculator calculator-numero" id="n_0" onclick="calculator.pressione_tasto(this)">0</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-strumento" id="s_point" onclick="calculator.pressione_tasto(this)">.</button>
+            </td>
+            <td class="calculator">
+                <button class="calculator calculator-operando" id="x_equals" onclick="calculator.pressione_tasto(this)">=</button>
+            </td>
+        </tr>
+    </table>
+
+<script>
+    calculator = new Calcolatrice("display_top", "display_op", "display_bot");
+</script>
+</body>
+</html>
